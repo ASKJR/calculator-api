@@ -9,6 +9,25 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
   "plugins": ["@typescript-eslint"],
-  "rules": { "no-unused-vars": ["error", { "argsIgnorePattern": "next" }] }
+  "rules": {
+    "no-unused-vars": ["error", { "argsIgnorePattern": "next" }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
 }
